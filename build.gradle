@@ -1,0 +1,30 @@
+buildscript {
+	
+	repositories {
+		mavenCentral()
+	}
+	
+}
+
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = "com.fractallabs.assignment.TwitterScanner"
+
+group = 'com.fractallabs'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	implementation('org.twitter4j:twitter4j-stream:4.0.7')
+	implementation('com.twitter:hbc-core:2.2.0')
+	implementation('org.json:json:20180813')
+	testCompile('junit:junit:4.12')
+}
